@@ -9,8 +9,8 @@
     "react-scripts": "2.0.4"
   },
   "scripts": {
-    "start": "react-scripts start && gulp run",
-    "build": "react-scripts build && gulp style",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
@@ -83,7 +83,8 @@
     "smart-grid": "^1.1.0",
     "stylelint": "^7.13.0",
     "stylelint-config-standard": "^16.0.0",
-    "uglify-js": "^3.0.25"
+    "uglify-js": "^3.0.25",
+    "webpack-cli": "^3.1.2"
   },
   "lint-staged": {
     "*.{js, jsx}": [

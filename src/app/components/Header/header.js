@@ -5,6 +5,7 @@ import search from "../../../imgs/search.png";
 import account from "../../../imgs/user.png";
 import card from "../../../imgs/bag-card.png";
 import { Link } from "react-router-dom";
+import Nav from "./topMenu";
 
 export default class Header extends Component {
   render() {
@@ -12,31 +13,34 @@ export default class Header extends Component {
       <Fragment>
         <Preheader />
         <div className="header">
-          <div className="logo">
-            <Link to="/">
-              <img src={Logo} alt="logo" />
-            </Link>
-          </div>
-          <div className="headerSearch">
-            <input type="text" placeholder="Поиск по сайту" />
-            <button>
-              <img src={search} alt="Поиск" />
-            </button>
-          </div>
-          <div className="account">
-            <Link to="/account">
-              <img src={account} alt="Анастасия" />
-              <span>Анастасия</span>
-            </Link>
-          </div>
-          <div className="card">
-            <Link to="/card">
-              <img src={card} alt="" />
-              <span>В корзине:</span>
-              <span>4 товара</span>
-            </Link>
+          <div className="wrapper">
+            <div className="logo">
+              <Link to="/">
+                <img src={Logo} alt="logo" />
+              </Link>
+            </div>
+            <div className="headerSearch">
+              <input type="text" placeholder="Поиск по сайту" />
+              <button>
+                <img src={search} alt="Поиск" />
+              </button>
+            </div>
+            <div className="account">
+              <Link to="/account">
+                <img src={account} alt="Анастасия" />
+                <span>Анастасия</span>
+              </Link>
+            </div>
+            <div className="card">
+              <Link to="/card">
+                <img src={card} alt="карзина" />
+                <span>В корзине:</span>
+                <span>4 товара</span>
+              </Link>
+            </div>
           </div>
         </div>
+        <Nav />
       </Fragment>
     );
   }
