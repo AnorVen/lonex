@@ -12,36 +12,31 @@ const menuList = [
     id: 2,
     parentId: 0,
     title: "Обувь",
-    href: "/footwear",
-    submenuItem: []
+    href: "/footwear"
   },
   {
     id: 3,
     parentId: 0,
     title: "Украшения",
-    href: "/jewelery",
-    submenuItem: []
+    href: "/jewelery"
   },
   {
     id: 4,
     parentId: 0,
     title: "Красота и здоровье",
-    href: "/health-and-beauty",
-    submenuItem: []
+    href: "/health-and-beauty"
   },
   {
     id: 5,
     parentId: 0,
     title: "Товары для дома",
-    href: "/household",
-    submenuItem: []
+    href: "/household"
   },
   {
     id: 6,
     parentId: 0,
     title: "Товары для кухни",
-    href: "/kitchen",
-    submenuItem: []
+    href: "/kitchen"
   },
   {
     id: 7,
