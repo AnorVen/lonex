@@ -1,0 +1,26 @@
+body {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  color: black;
+  background-color: #FFF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media screen and (max-width: 992px){
+    max-width: 972px;
+    padding: 0 10px;
+  }
+  @media screen and (max-width: 768px){
+    max-width: 748px;
+  }
+}

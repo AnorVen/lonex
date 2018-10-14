@@ -1,1 +1,1 @@
-p{font-size:20px}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&subset=cyrillic);body{font-family:Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:20px;color:#000;background-color:#fff}img{max-width:100%;height:auto}.wrapper{max-width:1200px;margin:0 auto;padding:0 15px}.preHeader{background-color:#e4e4e4}@media screen and (max-width:992px){.wrapper{max-width:972px;padding:0 10px}}@media screen and (max-width:768px){.wrapper{max-width:748px}}

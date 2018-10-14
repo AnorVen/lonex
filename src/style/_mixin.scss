@@ -1,0 +1,15 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin no-outline() {
+  outline: none;
+  background: transparent;
+  &::before {
+    display: none;
+  }
+}
