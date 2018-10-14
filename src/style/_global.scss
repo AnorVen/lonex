@@ -12,10 +12,25 @@ img {
   height: auto;
 }
 
+a, a:hover{
+  text-decoration: none;
+}
+a:visited{
+  color: #000;
+}
+ul{
+  padding-left: 0;
+}
+li{
+  list-style: none;
+}
+
+
 .wrapper {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+  text-align: center;
   @media screen and (max-width: 992px){
     max-width: 972px;
     padding: 0 10px;

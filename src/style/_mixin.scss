@@ -13,3 +13,42 @@
     display: none;
   }
 }
+@mixin wrap(){
+  &__wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+@mixin grid(){
+  display: flex;
+  flex-flow: row nowrap;
+  margin: -10px;
+}
+
+@mixin grid-mix(){
+  margin: 10px;
+  &--product {
+    width: calc((100% - 20px) / 6.66);
+    min-width: 178px;
+    text-align: left;
+  }
+  &--info{
+    width: calc((100% - 20px) / 3.3);
+    text-align: left;
+  }
+  &--quantity{
+    width: calc((100% - 20px) / 14.44);
+  }
+  &--price{
+    width: calc((100% - 20px) / 3.1);
+  }
+  &--del{
+    width: calc((100% - 20px) / 14.44);
+  }
+}
+
+
+
+$orange: #ff6c00;

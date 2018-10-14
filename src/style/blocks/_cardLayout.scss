@@ -1,0 +1,16 @@
+.cardLayout{
+  background-color: #fff;
+  &__title{
+    border-bottom: 2px solid #d9d9d9;
+    margin-bottom: 33px;
+    h3{
+      font-size: 22px;
+      position: relative;
+      display: inline-block;
+      top: 33px;
+      background-color: #fff;
+      padding: 0 17px;
+      font-weight: 500;
+    }
+  }
+}

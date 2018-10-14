@@ -1,0 +1,94 @@
+.product {
+  &__header {
+    justify-content: space-between;
+    @include grid();
+  }
+  &__title {
+    font-size: 18px;
+    @include grid-mix();
+    margin-bottom: 30px;
+
+  }
+  &__list {
+    margin: -10px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    @include grid-mix();
+    margin-bottom: 30px;
+
+  }
+  &__itemTitle {
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 250px;
+    margin-top: 0;
+  }
+  &__code {
+    display: block;
+    color: #808080;
+  }
+  &__size {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+  }
+  &__color {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .quantity {
+    &__dic {
+      border: none;
+      background-color: inherit;
+      @include no-outline();
+      color: #8d8d8d
+    }
+    &__dic:active {
+      box-shadow: inset 0 0 1px 0 black;
+      color: $orange;
+    }
+    &__dic:hover {
+      color: $orange;
+    }
+    &__inc {
+      border: none;
+      background-color: inherit;
+      @include no-outline();
+    }
+    &__inc:active {
+      box-shadow: inset 0 0 1px 0 black;
+      color: $orange;
+    }
+    &__inc:hover {
+      color: $orange;
+    }
+    &__res {
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+  }
+  &__price{
+    font-weight: 500;
+    font-size: 16px;
+
+  }
+  .del__btn{
+    border: none;
+    background-color: inherit;
+    padding-top: 4px;
+    @include no-outline();
+  }
+  .del__btn:active {
+    box-shadow: inset 0 0 1px 0 black;
+
+  }
+
+}

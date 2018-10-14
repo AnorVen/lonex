@@ -1,0 +1,35 @@
+.promocode{
+  border-top: 2px solid #d9d9d9;
+  @include wrap();
+  &__block{
+    width: calc((100% - 20px) / 2.5);
+    text-align: left;
+  }
+  &__input{
+    width:  277px;
+    padding: 15px;
+    @include no-outline();
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+  }
+  &__btn{
+    margin-left: 20px;
+    border: none;
+    @include no-outline();
+    background-color: #b7b7b7;
+    padding: 15px 42px;
+    border-radius: 30px;
+    color: #fff;
+
+  }
+  &__btn:hover{
+    background-color: $orange;
+  }
+  &__btn:active{
+    background-color: $orange;
+  }
+
+  &__total{
+
+  }
+}

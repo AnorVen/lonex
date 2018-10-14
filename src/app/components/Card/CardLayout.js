@@ -48,15 +48,15 @@ const products = [
 export default class CardLayout extends Component {
 	render() {
 		return (
-			<div className="card">
+			<div className="cardLayout">
 				<div className="wrapper">
-					<div className="card__title">
+					<div className="cardLayout__title">
 						<h3>Ваша корзина</h3>
 					</div>
 					{products ? (
 						<Product products={products} />
 					) : (
-						<div className="card__poproducts">
+						<div className="cardLayout__poproducts">
 							<h3>Карзина пуста!</h3>
 						</div>
 					)}

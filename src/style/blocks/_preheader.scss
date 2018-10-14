@@ -1,0 +1,64 @@
+.preHeader{
+  background-color: #e4e4e4;
+
+  @include wrap;
+  .phone{
+    &__number{
+      font-size: 18px;
+      line-height: 40px;
+      vertical-align: middle;
+    }
+    &__text{
+      font-size: 12px;
+      line-height: 40px;
+      vertical-align: middle;
+    }
+  }
+  .video{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+  }
+  .blog{
+    &__link{
+      height: 100%;
+      vertical-align: middle;
+    }
+    &__logo{
+      vertical-align: middle;
+    }
+    &__text{
+      line-height: 40px;
+    }
+  }
+
+  .youtubeHeader{
+    margin-left: 30px;
+    &__link{
+      height: 100%;
+      vertical-align: middle;
+    }
+    &__logo{
+      vertical-align: middle;
+    }
+    &__text{
+      line-height: 40px;
+    }
+  }
+  .onlineVideo{
+    margin-left: 30px;
+    &__link{
+      height: 100%;
+      vertical-align: middle;
+    }
+    &__logo{
+      vertical-align: middle;
+    }
+    &__text{
+      line-height: 40px;
+    }
+  }
+
+}
+
