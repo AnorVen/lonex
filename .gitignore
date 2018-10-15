@@ -27,3 +27,4 @@ yarn-error.log*
 *.psd
 *.sublime
 *css/*.css
+src/css/style.css
