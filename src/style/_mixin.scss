@@ -49,20 +49,50 @@
   &--info {
     width: calc((100% - 20px) / 3.3);
     text-align: left;
+    @media screen and (max-width: 767px) {
+      width: calc(100% - 200px);
+      margin-left: 20px;
+    }
+    @media screen and (max-width: 450px) {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+      margin-top: 10px;
+    }
   }
   &--quantity {
     width: calc((100% - 20px) / 14.44);
+    @media screen and (max-width: 767px) {
+      width: auto;
+      margin: 20px auto 0;
+    }
   }
   &--price {
     width: calc((100% - 20px) / 3.1);
+    @media screen and (max-width: 767px) {
+      width: auto;
+      margin: 20px auto 0;
+    }
   }
   &--del {
     width: calc((100% - 20px) / 14.44);
+    @media screen and (max-width: 767px) {
+      width: auto;
+      margin: 20px auto 0;
+    }
   }
   @media screen and (max-width: 992px){
     max-width: 100%;
     box-sizing: border-box;
+
+
+    @media screen and (max-width: 767px){
+      flex: 1 1 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
+
 }
 
 $orange: #ff6c00;

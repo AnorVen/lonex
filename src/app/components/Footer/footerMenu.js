@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class FooterMenu extends Component {
@@ -21,9 +21,9 @@ export default class FooterMenu extends Component {
 		});
 
 		return (
-			<div>
+			<Fragment>
 				<ul className="footerNav__list">{menu}</ul>
-			</div>
+			</Fragment>
 		);
 	}
 }

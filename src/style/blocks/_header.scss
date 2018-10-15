@@ -37,9 +37,15 @@
       position: relative;
       left: -17px;
       padding: 0;
+      @media screen and(max-width: 767px){
+        position: absolute;
+        left: auto;
+        right: 0;
+      }
     }
     @media screen and(max-width: 767px){
       margin-left: 30px;
+      position: relative;
     }
   }
 
