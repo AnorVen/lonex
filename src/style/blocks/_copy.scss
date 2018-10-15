@@ -1,0 +1,12 @@
+.copy{
+  background-color: #2a2a2a;
+  color: #cacaca;
+  padding-top: 38px;
+  padding-bottom: 40px;
+  &__text{
+    line-height: 12px;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+}

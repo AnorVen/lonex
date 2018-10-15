@@ -1,3 +1,4 @@
+
 @mixin clearfix() {
   &::after {
     content: "";
@@ -13,42 +14,55 @@
     display: none;
   }
 }
-@mixin wrap(){
+
+@mixin wrap() {
   &__wrap {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+  @media screen and(max-width: 992px) {
+    &__wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }
 
-@mixin grid(){
+@mixin grid() {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   margin: -10px;
+  @media screen and (max-width: 992px){
+    margin: 10px;
+  }
 }
 
-@mixin grid-mix(){
+@mixin grid-mix() {
   margin: 10px;
   &--product {
     width: calc((100% - 20px) / 6.66);
     min-width: 178px;
     text-align: left;
   }
-  &--info{
+  &--info {
     width: calc((100% - 20px) / 3.3);
     text-align: left;
   }
-  &--quantity{
+  &--quantity {
     width: calc((100% - 20px) / 14.44);
   }
-  &--price{
+  &--price {
     width: calc((100% - 20px) / 3.1);
   }
-  &--del{
+  &--del {
     width: calc((100% - 20px) / 14.44);
   }
+  @media screen and (max-width: 992px){
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
-
-
 
 $orange: #ff6c00;

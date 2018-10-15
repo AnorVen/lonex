@@ -1,8 +1,9 @@
 .promocode{
   border-top: 2px solid #d9d9d9;
+  padding-top: 10px;
   @include wrap();
   &__block{
-    width: calc((100% - 20px) / 2.5);
+    width: 460px;
     text-align: left;
   }
   &__input{
@@ -28,8 +29,56 @@
   &__btn:active{
     background-color: $orange;
   }
+  .total{
+    width: 355px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 
-  &__total{
+
+    &__сheckout{
+      margin-top: 10px;
+      margin-left: 20px;
+      border: none;
+      @include no-outline();
+      background-color: $orange;
+      padding: 15px 28px;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 16px;
+    }
+    &__сheckout:hover{
+      background-color: #ff8a00;
+    }
+    &__сheckout:active{
+      background-color: #ff8a00;
+    }
+    &__text{
+      text-align: left;
+      font-size: 16px;
+      &--sum{
+        margin-bottom: 5px;
+      }
+      &--promo{
+        margin-top: 0;
+        margin-bottom: 26px;
+        color:$orange;
+      }
+    }
+    &__sum{
+      text-align: right;
+      font-size: 16px;
+      &--sum{
+        margin-bottom: 5px;
+      }
+      &--promo{
+        margin-top: 0;
+        margin-bottom: 26px;
+        color:$orange;
+      }
+    }
+
 
   }
+
 }

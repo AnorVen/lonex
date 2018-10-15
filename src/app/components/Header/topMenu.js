@@ -61,9 +61,11 @@ const menuList = [
 let menuHendler = menuList => {
 	let newmenuList = [];
 	for (let i = 0; i < menuList.length; i++) {
-		menuList[i].submenu = [];
 		if (menuList[i].parentId !== 0) {
 			let a = menuList[i].parentId - 1;
+			if (!menuList[a].submenu) {
+				menuList[a].submenu = [];
+			}
 			menuList[a].submenu.push(menuList[i]);
 		} else {
 			newmenuList.push(menuList[i]);
@@ -78,7 +80,7 @@ export default class Nav extends Component {
 			return (
 				<li key={'menuItem' + index} className="mainMenu__item">
 					<Link to={item.href}>{item.title}</Link>
-					{item.submenu !== 0 ? (
+					{item.submenu !== undefined ? (
 						<ul className="submenu__list">
 							{item.submenu.map(function(item, index) {
 								return (

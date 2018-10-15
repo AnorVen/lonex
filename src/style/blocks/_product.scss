@@ -2,6 +2,9 @@
   &__header {
     justify-content: space-between;
     @include grid();
+    @media screen and (max-width: 767px){
+      display: none;
+    }
   }
   &__title {
     font-size: 18px;
@@ -15,7 +18,8 @@
   &__item {
     display: flex;
     justify-content: space-between;
-    flex-flow: row nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     @include grid-mix();
     margin-bottom: 30px;
 

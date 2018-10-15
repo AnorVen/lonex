@@ -12,8 +12,15 @@
       flex-wrap: nowrap;
       justify-content: left;
       margin: 0;
+      @media screen and(max-width: 992px){
+        flex-direction: column;
+        text-align: left;
+      }
     }
     &__item {
+      @media screen and(max-width: 992px){
+        margin-right: 0;
+      }
       margin-right: 15px;
       position: relative;
       line-height: 50px;
@@ -25,9 +32,15 @@
       width: 100%;
       bottom: -1px;
       position: absolute;
+      @media screen and(max-width: 992px){
+        display: none;
+      }
     }
     &__item:hover > .submenu__list {
       display: block;
+      @media screen and(max-width: 992px){
+        display: flex;
+      }
     }
   }
   .submenu {
@@ -35,16 +48,26 @@
       display: none;
       position: absolute;
       bottom: -40px;
-      min-width: 80vw;
+      min-width: 500px;
       max-width: 100%;
       text-align: left;
       line-height: 40px;
+
+      @media screen and(max-width: 992px){
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        position: static;
+      }
     }
     &__item {
       display: table-cell;
       padding-right: 35px;
       line-height: 40px;
       position: relative;
+      @media screen and(max-width: 992px){
+        padding-right: 0;
+      }
     }
     &__item:hover::after {
       content: '';
@@ -53,6 +76,9 @@
       width: 100%;
       bottom: -2px;
       position: absolute;
+      @media screen and(max-width: 992px){
+        display: none;
+      }
     }
   }
 }
