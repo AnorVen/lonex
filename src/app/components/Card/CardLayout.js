@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Addtoorder from './addToOrder';
 import Product from './products';
-import tov1 from '../../../imgs/tov1.jpg';
-import tov2 from '../../../imgs/tov2.jpg';
-import tov3 from '../../../imgs/tov3.jpg';
-import tov4 from '../../../imgs/tov3.jpg';
 
-const products = [
+import { fetchCard } from '../../actions/cardActions';
+import { connect } from 'react-redux';
+
+/*const products = [
 	{
 		title: 'Платье-миди с расклешенной юбкой',
 		img: tov1,
@@ -43,9 +42,15 @@ const products = [
 		color: 'белый',
 		quantity: 1,
 	},
-];
+];*/
 
-export default class CardLayout extends Component {
+class CardLayout extends Component {
+	constructor(props) {
+		super(props);
+		let products = fetchCard;
+		this.props.dispatch(products);
+	}
+
 	render() {
 		return (
 			<div className="cardLayout">
@@ -53,8 +58,8 @@ export default class CardLayout extends Component {
 					<div className="cardLayout__title">
 						<h3>Ваша корзина</h3>
 					</div>
-					{products ? (
-						<Product products={products} />
+					{this.props.products ? (
+						<Product products={this.props.products} />
 					) : (
 						<div className="cardLayout__poproducts">
 							<h3>Карзина пуста!</h3>
@@ -66,3 +71,12 @@ export default class CardLayout extends Component {
 		);
 	}
 }
+
+const mapStateToProps = store => {
+	console.log(store);
+	return {
+		products: store.products.products,
+	};
+};
+
+export default connect(mapStateToProps)(CardLayout);
