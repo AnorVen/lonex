@@ -408,6 +408,11 @@ li
     margin-right: 15px;
 }
 
+.nav .mainMenu__item a
+{
+    color: #000;
+}
+
 .nav .mainMenu__item:hover::after
 {
     position: absolute;
@@ -451,6 +456,11 @@ li
     display: table-cell;
 
     padding-right: 35px;
+}
+
+.nav .submenu__item a
+{
+    color: #000;
 }
 
 .nav .submenu__item:hover::after

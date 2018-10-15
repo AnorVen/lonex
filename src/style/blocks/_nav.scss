@@ -24,6 +24,9 @@
       margin-right: 15px;
       position: relative;
       line-height: 50px;
+      a{
+        color: #000;
+      }
     }
     &__item:hover::after {
       content: '';
@@ -65,9 +68,12 @@
       padding-right: 35px;
       line-height: 40px;
       position: relative;
-      @media screen and(max-width: 992px){
-        padding-right: 0;
+      a{
+        color: #000;
       }
+      @media screen and(max-width: 992px){
+      padding-right: 0;
+    }
     }
     &__item:hover::after {
       content: '';
