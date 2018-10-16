@@ -6,13 +6,8 @@ export default class Product extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			products: [],
-		};
-	}
-	componentDidMount() {
-		this.setState({
 			products: this.props.products,
-		});
+		};
 	}
 
 	render() {

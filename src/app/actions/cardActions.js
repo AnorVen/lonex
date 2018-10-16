@@ -1,8 +1,8 @@
-import * as prod from '../../jsons/products';
+import { products } from '../../jsons/products';
 
-import { FETCH_CARD_FULFILLED } from '../constants/CardConst';
+import { ITEM_INC } from '../constants/CardConst';
 
-import tov1 from '../../imgs/tov1.jpg';
+/*import tov1 from '../../imgs/tov1.jpg';
 import tov2 from '../../imgs/tov2.jpg';
 import tov3 from '../../imgs/tov3.jpg';
 import tov4 from '../../imgs/tov3.jpg';
@@ -46,11 +46,12 @@ const products = {
 			quantity: 1,
 		},
 	],
-};
+};*/
 
 export function fetchCard() {
+	console.log(products);
 	return {
-		type: FETCH_CARD_FULFILLED,
+		type: ITEM_INC,
 		payload: products,
 	};
 }

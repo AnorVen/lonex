@@ -1,7 +1,11 @@
 import * as CardConst from '../constants/CardConst';
 
+// noinspection JSAnnotator
 export const cardReduser = (state = { products: [], is_fetching: false }, action) => {
 	switch (action.type) {
+		case 'main':
+			return state;
+
 		case CardConst.FETCH_CARD_PENDING: {
 			return (state = { ...state, is_fetching: true });
 		}
@@ -29,7 +33,6 @@ export const cardReduser = (state = { products: [], is_fetching: false }, action
 		case CardConst.ITEM_INC: {
 			return (state = {
 				...state,
-				is_fetching: false,
 				products: action.payload.data,
 			});
 		}
