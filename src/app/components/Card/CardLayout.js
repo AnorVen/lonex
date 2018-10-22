@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import Addtoorder from './addToOrder';
 import Product from './products';
 
-import { loadProducts } from '../../actions/cardActions';
+import { itemInc } from '../../actions/cardActions';
 import { connect } from 'react-redux';
 
 class CardLayout extends Component {
 	constructor(props) {
 		super(props);
-		loadProducts();
 	}
 
 	render() {
+		const { title, img, price, code, size, color, quantity } = this.props;
 		return (
 			<div className="cardLayout">
 				<div className="wrapper">
@@ -19,10 +19,10 @@ class CardLayout extends Component {
 						<h3>Ваша корзина</h3>
 					</div>
 
-					{this.props.productsAct.length !== 0 ? (
+					{this.props.products.length !== 0 ? (
 						<div>
 							<h2>action</h2>
-							<Product products={this.props.productsAct} />
+							<Product products={this.props.products} itemInc={itemInc} />
 						</div>
 					) : (
 						<div className="cardLayout__poproducts">
@@ -39,7 +39,12 @@ class CardLayout extends Component {
 const mapStateToProps = store => {
 	console.log(store);
 	return {
-		productsAct: store.products,
+		products: store.products,
+	};
+};
+const mapDispatchToProps = dispatch => {
+	return {
+		itemInc: id => dispatch(itemInc(id)),
 	};
 };
 

@@ -3,15 +3,12 @@ import cansel from '../../../imgs/cancel.png';
 import Promocode from './promocod';
 
 export default class Product extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			products: this.props.products,
-		};
-	}
+	btnHandlerInc = () => {
+		console.log(1);
+	};
 
 	render() {
-		let products = this.state.products.map(function(item, index) {
+		const products = this.props.products.map(function(item, index) {
 			return (
 				<div className="product__item" key={index}>
 					<div className="product__img product__item--product">
