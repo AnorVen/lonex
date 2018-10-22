@@ -23,7 +23,9 @@ export default class Product extends Component {
 					<div className="product__quantity product__item--quantity">
 						<button className="quantity__dic">-</button>
 						<span className="quantity__res">{item.quantity}</span>
-						<button className="quantity__inc">+</button>
+						<button className="quantity__inc" onClick={this.btnHandlerInc}>
+							+
+						</button>
 					</div>
 					<div className="product__price product__item--price">
 						<span className="price">{item.price} руб.</span>
