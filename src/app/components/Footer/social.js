@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 import vk from '../../../imgs/vk.png';
 import fb from '../../../imgs/fb.png';
 import ok from '../../../imgs/ok.png';

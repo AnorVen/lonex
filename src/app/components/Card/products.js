@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import cansel from '../../../imgs/cancel.png';
 import Promocode from './promocod';
 
@@ -58,7 +58,7 @@ export default class Product extends Component {
 					</div>
 				</div>
 				<div className="product__list">{products}</div>
-				<Promocode summ />
+				<Promocode />
 			</div>
 		);
 	}

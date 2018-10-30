@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Social from './social';
 import Copy from './copy';
 import FooterLogo from './footerLogo';

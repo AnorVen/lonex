@@ -6,12 +6,8 @@ import { itemInc } from '../../actions/cardActions';
 import { connect } from 'react-redux';
 
 class CardLayout extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
-		const { title, img, price, code, size, color, quantity } = this.props;
+		const { itemIncAction } = this.props;
 		return (
 			<div className="cardLayout">
 				<div className="wrapper">
@@ -22,11 +18,12 @@ class CardLayout extends Component {
 					{this.props.products.length !== 0 ? (
 						<div>
 							<h2>action</h2>
-							<Product products={this.props.products} itemInc={itemInc} />
+							<Product products={this.props.products} />
 						</div>
 					) : (
 						<div className="cardLayout__poproducts">
 							<h3>Карзина пуста!</h3>
+							<button onClick={itemInc}>Загрузить товары</button>
 						</div>
 					)}
 					<Addtoorder />
@@ -39,13 +36,16 @@ class CardLayout extends Component {
 const mapStateToProps = store => {
 	console.log(store);
 	return {
-		products: store.products,
+		products: store.products.products,
 	};
 };
 const mapDispatchToProps = dispatch => {
 	return {
-		itemInc: id => dispatch(itemInc(id)),
+		itemIncAction: () => dispatch(itemInc),
 	};
 };
 
-export default connect(mapStateToProps)(CardLayout);
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(CardLayout);

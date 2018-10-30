@@ -1,6 +1,7 @@
 import * as TotalCheckout from '../constants/TotalCheckoutConst';
+export const totalCheckout = 0;
 
-export const totalCheckoutReduser = (state = { totalCheckout: 0, is_fetching: false }, action) => {
+export const totalCheckoutReduser = (state = { totalCheckout, is_fetching: false }, action) => {
 	switch (action.type) {
 		case TotalCheckout.CARD_CHECKOUT: {
 			return (state = {

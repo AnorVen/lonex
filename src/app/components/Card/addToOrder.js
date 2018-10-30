@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import add1 from '../../../imgs/dop1.jpg';
 import add2 from '../../../imgs/dop2.jpg';

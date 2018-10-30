@@ -1,10 +1,9 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import promise from 'redux-promise-middleware';
 
-import { initialState } from '../redusers/CardRedusers';
 import { indexRedusers } from '../redusers/indexReduser';
 
 const logger = createLogger({
@@ -13,4 +12,4 @@ const logger = createLogger({
 
 const middleware = applyMiddleware(thunk, logger, promise);
 
-export const store = createStore(indexRedusers, initialState, middleware);
+export const store = createStore(indexRedusers, middleware);
