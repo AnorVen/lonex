@@ -23,7 +23,7 @@ class CardLayout extends Component {
 					) : (
 						<div className="cardLayout__poproducts">
 							<h3>Карзина пуста!</h3>
-							<button onClick={itemInc}>Загрузить товары</button>
+							<button onClick={itemIncAction}>Загрузить товары</button>
 						</div>
 					)}
 					<Addtoorder />
@@ -40,6 +40,7 @@ const mapStateToProps = store => {
 	};
 };
 const mapDispatchToProps = dispatch => {
+	console.log(itemInc);
 	return {
 		itemIncAction: () => dispatch(itemInc),
 	};
