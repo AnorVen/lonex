@@ -2,7 +2,7 @@
   &__header {
     justify-content: space-between;
     @include grid();
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       display: none;
     }
   }
@@ -22,14 +22,24 @@
     flex-wrap: nowrap;
     @include grid-mix();
     margin-bottom: 30px;
-
   }
+  &__img {
+    img {
+      display: block;
+    }
+  }
+
   &__itemTitle {
     font-weight: 500;
     font-size: 16px;
     max-width: 250px;
     margin-top: 0;
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+    }
+
   }
+
   &__code {
     display: block;
     color: #808080;
@@ -76,15 +86,16 @@
     &__res {
       font-weight: 500;
       font-size: 20px;
+      vertical-align: bottom;
     }
 
   }
-  &__price{
+  &__price {
     font-weight: 500;
     font-size: 16px;
 
   }
-  .del__btn{
+  .del__btn {
     border: none;
     background-color: inherit;
     padding-top: 4px;

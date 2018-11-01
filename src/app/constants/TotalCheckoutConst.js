@@ -1,0 +1,1 @@
+export const CARD_CHECKOUT = 'CARD_CHECKOUT';

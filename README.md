@@ -1,12 +1,6 @@
 "# lonex test";
 # npm i - установка модулей
-# npm start - закуск webpack
-# gulp run - запуск gulp для отслеживания scss - запускать в отдельном окне терминала
-
-
-
-
-
+# npm start - закуск webpack и локального сервера
 
 
 
